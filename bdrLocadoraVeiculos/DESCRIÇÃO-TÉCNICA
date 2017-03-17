@@ -1,0 +1,47 @@
+Software Project: Cadastro de Automóveis para Locadora de Veículos
+Version: 1.0.0.0
+See also: Software Release
+Size: 6.86 MB
+Autor: Gilson da Silva
+Descrição técnica:
+
+ Aplicação Dynamic Web project implementada em linguagem Java, utilizando api de 
+UI - primefaces em sua versão 6, com padrão MVC, Onde o Controlador Faces 
+Servelt recebe a requisição e pode definir qual página chamar, sendo esta 
+uma aplicação de apenas um cadastro optou-se por deixar num padrão onePage,
+a visão onde é definido a interface gráfica e o Modelo que representa o 
+domínio da aplicação, tendo os management Beans como intermediários 
+entre Visão e Modelo.
+ Projeto criado com Eclipse Java EE IDE for Web Developers.
+	Version: Neon.2 Release (4.6.2)
+	Build id: 20161208-0600
+ Utilizado servidor de aplicação Tomcat Version 9
+ Efetuado a persistencia/Validações no BackEnd em JAVA retornando
+ para o usuário através dos componentes da UI.
+ Toda a persistencia feita em memória para atender ao requisito de não 
+ utilizar banco de dados;
+ 
+ 
+ Arquivos -
+ 
+ web.xml - Contem a declaração do Face Servlet;
+ 
+ faces-config.xml - contem as configurações do jsf quando necessárias;
+ 
+ Pasta lib: em WebContent/WEB-INF/lib, contem as bibliotecas java server faces e primefaces
+ para as especificações do jsf e da interface UI primefaces respectivamente.
+ 
+ veiculo.xhtml - arquivo responsável pela visão no MVC, contem as chamadas de URI, e a implementação dos 
+ formulários associados ao Bean uma classe gerenciada pelo JSF.
+ 
+ br.com.bdr.locadora.Bean.VeiculoBean  - possui implementação de algumas regras de validação e utiliza o modelo 
+ para repassar os valores fazendo a interligação com a visão
+ 
+ br.com.bdr.locadora.Modelo.Veiculo - responsável por encapsular os atributos do objeto;
+ 
+ br.com.bdr.locadora.Dao.VeiculoDao - responsável por efetuar a comunicação com o banco;
+ 
+ br.com.bdr.locadora.Dao.Banco -  esta classe simula as operações adicionando, removendo, alterando e listando os dados
+ em memória no arrayList.
+ 
+ 
